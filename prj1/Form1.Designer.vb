@@ -29,6 +29,8 @@ Partial Class Form1
     	Me.label2 = New System.Windows.Forms.Label()
     	Me.label1 = New System.Windows.Forms.Label()
     	Me.label5 = New System.Windows.Forms.Label()
+    	Me.textBox1 = New System.Windows.Forms.TextBox()
+    	Me.textBox2 = New System.Windows.Forms.TextBox()
     	Me.SuspendLayout
     	'
     	'btn_Inicio
@@ -96,11 +98,27 @@ Partial Class Form1
     	Me.label5.Text = "="
     	Me.label5.Visible = false
     	'
+    	'textBox1
+    	'
+    	Me.textBox1.Location = New System.Drawing.Point(623, 132)
+    	Me.textBox1.Name = "textBox1"
+    	Me.textBox1.Size = New System.Drawing.Size(100, 20)
+    	Me.textBox1.TabIndex = 13
+    	'
+    	'textBox2
+    	'
+    	Me.textBox2.Location = New System.Drawing.Point(623, 180)
+    	Me.textBox2.Name = "textBox2"
+    	Me.textBox2.Size = New System.Drawing.Size(100, 20)
+    	Me.textBox2.TabIndex = 14
+    	'
     	'Form1
     	'
     	Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
     	Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
     	Me.ClientSize = New System.Drawing.Size(753, 262)
+    	Me.Controls.Add(Me.textBox2)
+    	Me.Controls.Add(Me.textBox1)
     	Me.Controls.Add(Me.label5)
     	Me.Controls.Add(Me.label4)
     	Me.Controls.Add(Me.label3)
@@ -113,6 +131,8 @@ Partial Class Form1
     	Me.ResumeLayout(false)
     	Me.PerformLayout
     End Sub
+    Private textBox2 As System.Windows.Forms.TextBox
+    Private textBox1 As System.Windows.Forms.TextBox
     Private label5 As System.Windows.Forms.Label
     Private label1 As System.Windows.Forms.Label
     Private label2 As System.Windows.Forms.Label
