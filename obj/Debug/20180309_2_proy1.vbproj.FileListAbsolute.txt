@@ -1,0 +1,22 @@
+c:\users\ricardo2\documents\visual studio 2017\Projects\20180309_2_proy1\20180309_2_proy1\bin\Debug\20180309_2_proy1.exe.config
+c:\users\ricardo2\documents\visual studio 2017\Projects\20180309_2_proy1\20180309_2_proy1\bin\Debug\20180309_2_proy1.exe
+c:\users\ricardo2\documents\visual studio 2017\Projects\20180309_2_proy1\20180309_2_proy1\bin\Debug\20180309_2_proy1.pdb
+c:\users\ricardo2\documents\visual studio 2017\Projects\20180309_2_proy1\20180309_2_proy1\bin\Debug\20180309_2_proy1.xml
+c:\users\ricardo2\documents\visual studio 2017\Projects\20180309_2_proy1\20180309_2_proy1\obj\Debug\20180309_2_proy1.vbprojResolveAssemblyReference.cache
+c:\users\ricardo2\documents\visual studio 2017\Projects\20180309_2_proy1\20180309_2_proy1\obj\Debug\_20180309_2_proy1.Form1.resources
+c:\users\ricardo2\documents\visual studio 2017\Projects\20180309_2_proy1\20180309_2_proy1\obj\Debug\_20180309_2_proy1.Resources.resources
+c:\users\ricardo2\documents\visual studio 2017\Projects\20180309_2_proy1\20180309_2_proy1\obj\Debug\20180309_2_proy1.vbproj.GenerateResource.Cache
+c:\users\ricardo2\documents\visual studio 2017\Projects\20180309_2_proy1\20180309_2_proy1\obj\Debug\20180309_2_proy1.exe
+c:\users\ricardo2\documents\visual studio 2017\Projects\20180309_2_proy1\20180309_2_proy1\obj\Debug\20180309_2_proy1.xml
+c:\users\ricardo2\documents\visual studio 2017\Projects\20180309_2_proy1\20180309_2_proy1\obj\Debug\20180309_2_proy1.pdb
+C:\Users\jomel\Desktop\20180309_2_proy1\bin\Debug\20180309_2_proy1.exe.config
+C:\Users\jomel\Desktop\20180309_2_proy1\bin\Debug\20180309_2_proy1.exe
+C:\Users\jomel\Desktop\20180309_2_proy1\bin\Debug\20180309_2_proy1.pdb
+C:\Users\jomel\Desktop\20180309_2_proy1\bin\Debug\20180309_2_proy1.xml
+C:\Users\jomel\Desktop\20180309_2_proy1\obj\Debug\20180309_2_proy1.vbprojResolveAssemblyReference.cache
+C:\Users\jomel\Desktop\20180309_2_proy1\obj\Debug\_20180309_2_proy1.Form1.resources
+C:\Users\jomel\Desktop\20180309_2_proy1\obj\Debug\_20180309_2_proy1.Resources.resources
+C:\Users\jomel\Desktop\20180309_2_proy1\obj\Debug\20180309_2_proy1.vbproj.GenerateResource.Cache
+C:\Users\jomel\Desktop\20180309_2_proy1\obj\Debug\20180309_2_proy1.exe
+C:\Users\jomel\Desktop\20180309_2_proy1\obj\Debug\20180309_2_proy1.xml
+C:\Users\jomel\Desktop\20180309_2_proy1\obj\Debug\20180309_2_proy1.pdb
