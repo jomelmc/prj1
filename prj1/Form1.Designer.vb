@@ -28,9 +28,13 @@ Partial Class Form1
     	Me.label3 = New System.Windows.Forms.Label()
     	Me.label2 = New System.Windows.Forms.Label()
     	Me.label1 = New System.Windows.Forms.Label()
-    	Me.label5 = New System.Windows.Forms.Label()
-    	Me.textBox1 = New System.Windows.Forms.TextBox()
-    	Me.textBox2 = New System.Windows.Forms.TextBox()
+    	Me.resultado = New System.Windows.Forms.Label()
+    	Me.signo_igual = New System.Windows.Forms.Label()
+    	Me.btn_borrar = New System.Windows.Forms.Button()
+    	Me.btn_borrar_todo = New System.Windows.Forms.Button()
+    	Me.btn_resolver = New System.Windows.Forms.Button()
+    	Me.btn_siguiente = New System.Windows.Forms.Button()
+    	Me.ganar = New System.Windows.Forms.Label()
     	Me.SuspendLayout
     	'
     	'btn_Inicio
@@ -45,7 +49,7 @@ Partial Class Form1
     	'
     	'txt_Indice
     	'
-    	Me.txt_Indice.Location = New System.Drawing.Point(496, 125)
+    	Me.txt_Indice.Location = New System.Drawing.Point(496, 155)
     	Me.txt_Indice.Name = "txt_Indice"
     	Me.txt_Indice.ReadOnly = true
     	Me.txt_Indice.Size = New System.Drawing.Size(40, 20)
@@ -88,38 +92,92 @@ Partial Class Form1
     	Me.label1.TabIndex = 8
     	Me.label1.Text = "UNIVERSIDAD TECNOLÓGICA DE PANAMÁ"
     	'
-    	'label5
+    	'resultado
     	'
-    	Me.label5.Font = New System.Drawing.Font("Montserrat", 18!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-    	Me.label5.Location = New System.Drawing.Point(464, 122)
-    	Me.label5.Name = "label5"
-    	Me.label5.Size = New System.Drawing.Size(30, 30)
-    	Me.label5.TabIndex = 12
-    	Me.label5.Text = "="
-    	Me.label5.Visible = false
+    	Me.resultado.Font = New System.Drawing.Font("Montserrat", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+    	Me.resultado.Location = New System.Drawing.Point(496, 123)
+    	Me.resultado.Name = "resultado"
+    	Me.resultado.Size = New System.Drawing.Size(40, 29)
+    	Me.resultado.TabIndex = 13
+    	Me.resultado.Visible = false
     	'
-    	'textBox1
+    	'signo_igual
     	'
-    	Me.textBox1.Location = New System.Drawing.Point(623, 132)
-    	Me.textBox1.Name = "textBox1"
-    	Me.textBox1.Size = New System.Drawing.Size(100, 20)
-    	Me.textBox1.TabIndex = 13
+    	Me.signo_igual.Font = New System.Drawing.Font("Montserrat", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+    	Me.signo_igual.Location = New System.Drawing.Point(470, 123)
+    	Me.signo_igual.Name = "signo_igual"
+    	Me.signo_igual.Size = New System.Drawing.Size(24, 23)
+    	Me.signo_igual.TabIndex = 14
+    	Me.signo_igual.Text = "="
+    	Me.signo_igual.Visible = false
     	'
-    	'textBox2
+    	'btn_borrar
     	'
-    	Me.textBox2.Location = New System.Drawing.Point(623, 180)
-    	Me.textBox2.Name = "textBox2"
-    	Me.textBox2.Size = New System.Drawing.Size(100, 20)
-    	Me.textBox2.TabIndex = 14
+    	Me.btn_borrar.Font = New System.Drawing.Font("Montserrat", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+    	Me.btn_borrar.Location = New System.Drawing.Point(577, 200)
+    	Me.btn_borrar.Name = "btn_borrar"
+    	Me.btn_borrar.Size = New System.Drawing.Size(80, 23)
+    	Me.btn_borrar.TabIndex = 15
+    	Me.btn_borrar.Text = "Borrar"
+    	Me.btn_borrar.UseVisualStyleBackColor = true
+    	Me.btn_borrar.Visible = false
+    	AddHandler Me.btn_borrar.Click, AddressOf Me.Btn_borrarClick
+    	'
+    	'btn_borrar_todo
+    	'
+    	Me.btn_borrar_todo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+    	Me.btn_borrar_todo.Location = New System.Drawing.Point(577, 231)
+    	Me.btn_borrar_todo.Name = "btn_borrar_todo"
+    	Me.btn_borrar_todo.Size = New System.Drawing.Size(80, 23)
+    	Me.btn_borrar_todo.TabIndex = 16
+    	Me.btn_borrar_todo.Text = "Borrar todo"
+    	Me.btn_borrar_todo.UseVisualStyleBackColor = true
+    	Me.btn_borrar_todo.Visible = false
+    	AddHandler Me.btn_borrar_todo.Click, AddressOf Me.Btn_borrar_todoClick
+    	'
+    	'btn_resolver
+    	'
+    	Me.btn_resolver.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+    	Me.btn_resolver.Location = New System.Drawing.Point(496, 200)
+    	Me.btn_resolver.Name = "btn_resolver"
+    	Me.btn_resolver.Size = New System.Drawing.Size(75, 54)
+    	Me.btn_resolver.TabIndex = 17
+    	Me.btn_resolver.Text = "Resolver"
+    	Me.btn_resolver.UseVisualStyleBackColor = true
+    	Me.btn_resolver.Visible = false
+    	AddHandler Me.btn_resolver.Click, AddressOf Me.Btn_resolverClick
+    	'
+    	'btn_siguiente
+    	'
+    	Me.btn_siguiente.Font = New System.Drawing.Font("Montserrat", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+    	Me.btn_siguiente.Location = New System.Drawing.Point(496, 260)
+    	Me.btn_siguiente.Name = "btn_siguiente"
+    	Me.btn_siguiente.Size = New System.Drawing.Size(161, 36)
+    	Me.btn_siguiente.TabIndex = 18
+    	Me.btn_siguiente.Text = "Siguiente >"
+    	Me.btn_siguiente.UseVisualStyleBackColor = true
+    	Me.btn_siguiente.Visible = false
+    	'
+    	'ganar
+    	'
+    	Me.ganar.Font = New System.Drawing.Font("Montserrat", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+    	Me.ganar.Location = New System.Drawing.Point(558, 123)
+    	Me.ganar.Name = "ganar"
+    	Me.ganar.Size = New System.Drawing.Size(141, 46)
+    	Me.ganar.TabIndex = 19
     	'
     	'Form1
     	'
     	Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
     	Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-    	Me.ClientSize = New System.Drawing.Size(753, 262)
-    	Me.Controls.Add(Me.textBox2)
-    	Me.Controls.Add(Me.textBox1)
-    	Me.Controls.Add(Me.label5)
+    	Me.ClientSize = New System.Drawing.Size(742, 333)
+    	Me.Controls.Add(Me.ganar)
+    	Me.Controls.Add(Me.btn_siguiente)
+    	Me.Controls.Add(Me.btn_resolver)
+    	Me.Controls.Add(Me.btn_borrar_todo)
+    	Me.Controls.Add(Me.btn_borrar)
+    	Me.Controls.Add(Me.signo_igual)
+    	Me.Controls.Add(Me.resultado)
     	Me.Controls.Add(Me.label4)
     	Me.Controls.Add(Me.label3)
     	Me.Controls.Add(Me.label2)
@@ -131,9 +189,13 @@ Partial Class Form1
     	Me.ResumeLayout(false)
     	Me.PerformLayout
     End Sub
-    Private textBox2 As System.Windows.Forms.TextBox
-    Private textBox1 As System.Windows.Forms.TextBox
-    Private label5 As System.Windows.Forms.Label
+    Private ganar As System.Windows.Forms.Label
+    Private btn_siguiente As System.Windows.Forms.Button
+    Private btn_resolver As System.Windows.Forms.Button
+    Private btn_borrar_todo As System.Windows.Forms.Button
+    Private btn_borrar As System.Windows.Forms.Button
+    Private signo_igual As System.Windows.Forms.Label
+    Private resultado As System.Windows.Forms.Label
     Private label1 As System.Windows.Forms.Label
     Private label2 As System.Windows.Forms.Label
     Private label3 As System.Windows.Forms.Label
