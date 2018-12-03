@@ -25,6 +25,7 @@
     Dim resultado_parcial
     Dim count_rep = 0
     Dim indict = 0
+    Dim indict_op = 0
     Dim ind = 1
     Private Sub btn_Inicio_Click(sender As Object, e As EventArgs) Handles btn_Inicio.Click
         btn_Inicio.Visible= "True"
@@ -55,25 +56,22 @@
         'NUMEROS ALEATORIOS
         Dim it = 0
         For i=0 To 3
-        	random_temp = ram.Next(1, 9)
-        	If (i>0) Then
-        		Do While it < 4
-    
-        			If (random_temp = random_anterior(it))
-	    				count_rep = count_rep + 1
-        			End If
-        			
-        			If ((it = 3) And (count_rep <> 0)) Then
-        				random_temp = ram.Next(1, 9)
-        				it = 0
-        				count_rep = 0
-        				
-        			Else 
-        				it = it + 1
-        			End If
-        		Loop
+        	random_temp = ram.Next(1, 10)
+        	
+    		Do While (it > 0 And it < 5)
+
+    			If (random_temp = random_anterior(it-1))
+    				count_rep = count_rep + 1
+    			End If
     			
-        	End If
+    			If ((it = 4) And (count_rep > 0)) Then
+    				random_temp = ram.Next(1, 10)
+    				it = 0
+    				count_rep = 0
+    			End If    			
+    			it = it + 1
+    		Loop
+    		it = 1
         	random_anterior(i) = random_temp
         	btn_Random = New Button()
             btn_Random.Size = New Size(40, 20)
@@ -120,7 +118,7 @@
             Controls.Add(btn_Operador)
             vbtn_Operador(i) = btn_Operador
             AddHandler btn_Operador.Click, AddressOf btn_Operador_Click
-            
+
         Next
         
         count_rep = 0
@@ -131,110 +129,138 @@
         'SE GENERA LA SOLUCIÓN
         Dim ind = 1
         Do While (ind < 8)
+        	If (ind > 1) Then
+        		ind = ind + 1
+        	End If
         	numero_resultado = Val(num_ram.Next(1, 4))
         	operador_resultado = Val(op_ram.Next(1, 4))
-        	
-        	Do While (indict < 5)
-        		indict = indict + 1
-        		If (indict <= 4) Then
-        			If (numero_resultado = random_anterior(indict-1))
-    					count_rep = count_rep + 1
-        			End If
-        			
-        			If ((indict = 4) And (count_rep <> 0)) Then
-        				Dim num_ram As New System.Random()
-	    				numero_resultado = num_ram.Next(1, 4)
-	    				indict = 0
-	    				count_rep = 0
-	    			ElseIf ((indict = 4) And (count_rep = 0)) Then
-	    				random_anterior(indict-1) = numero_resultado
-	    			End If
-        		End If
-        	Loop
-        	count_rep = 0
-    	    
+	    	
+	    	'GENERA UN RAMDOM PARA ESCOGER UN NÚMERO
+	    	Do While (indict > 0 And indict < 5)
+			
+				If (random_temp = random_anterior(indict-1))
+					count_rep = count_rep + 1
+				End If
+				
+				If ((it = 4) And (count_rep > 0)) Then
+					numero_resultado = num_ram.Next(1, 5)
+					indict = 0
+					count_rep = 0
+				End If    			
+				indict = indict + 1
+			Loop
+			indict = 1
+			count_rep = 0
+			
+			'GENERA UN RAMDOM PARA ESCOGER UN OPERADOR
+	    	Do While (indict_op > 0 And indict_op < 5)
+			
+				If (random_temp = random_anterior(indict_op -1))
+					count_rep = count_rep + 1
+				End If
+				
+				If ((it = 4) And (count_rep > 0)) Then
+					operador_resultado = num_ram.Next(1, 5)
+					indict_op = 0
+					count_rep = 0
+				End If    			
+				indict_op = indict_op + 1
+			Loop
+			indict_op = 1
+	    	count_rep = 0
+	    	
+	    	'ESCOGE EL PRIMER NÚMERO
+	    	indic = 0
     		If (ind = 1) Then
-	    		For indic=0 To 3
+	    		Do While (indic <= 3)
 	        		
 	        		If (numero_resultado = Val(vbtn_Random(indic).Tag)) Then
 	        			count_rep = count_rep + 1
 	        		End If
 	        		
-	        		If (count_rep <> 0) Then
+	        		If (count_rep > 0) Then
 	        			result(ind-1) = vbtn_Random(indic).Text
+	        			indic = 4
 	        		End If
-	        		
-	    		Next
+	        		indic = indic + 1
+	    		Loop
 	    		count_rep = 0
 	    		resultado_pantalla = result(ind-1)
-	    		ind = ind + 2
 	    
-    		      	
+    		
     		ElseIf (ind = 3) Then
-    			
-	    		For indic=0 To 3
-	        		
-	        		If (numero_resultado = Val(vbtn_Random(indic).Tag)) Then
-	        			count_rep = count_rep + 1
-	        		End If
-	        		
-	        		If (count_rep <> 0) Then
-	        			result(ind-1) = vbtn_Random(indic).Text
-	        		End If
-	        		
-	        	Next
-	        	count_rep = 0
-	        	
-    			For indic=0 To 2
+
+    			'ESCOGE EL PRIMER OPERADOR
+    			For indic=0 To 3
     				If (operador_resultado = Val(vbtn_Operador(indic).Tag)) Then
 	    				count_rep = count_rep + 1
 	    			End If
 	    			
-	    			If (count_rep <> 0) Then
+	    			If (count_rep > 0) Then
 	        			result(ind-2) = vbtn_Operador(indic).Text
 	        		End If
     			Next
     			count_rep = 0
+    			
+    			'ESCOGE EL SEGUNDO NÚMERO
+	    		For indic=0 To 3
+	        		
+	        		If (numero_resultado = Val(vbtn_Random(indic).Tag)) Then
+	        			count_rep = count_rep + 1
+	        		End If
+	        		
+	        		If (count_rep > 0) Then
+	        			result(ind-1) = vbtn_Random(indic).Text
+	        		End If
+	        	Next
+	        	count_rep = 0
+	        	
+	        	'RESUELVE LA PRIMERA OPERACION
     			resultado_pantalla = resultado_parcial.ResolverOperacion(Val(result(ind-3)), result(ind-2), Val(result(ind-1)))
-    			ind = ind + 2
-        		
-    		ElseIf(((resultado_pantalla * 100) Mod 100) = 0) Then
+    			
+        	'RESUELVE LAS OPERACIONES SIEMPRE QUE LAS ANTERIORES NO HAYAN RESULTADO EN DECIMAL
+    		ElseIf(ind > 3 And (((resultado_pantalla * 100) Mod 100) = 0)) Then
     			
     			If (ind <= 7) Then 
-	    				
+	    			'ESCOGE NÚMERO
 	    			For indic=0 To 3
 			        	If (numero_resultado = Val(vbtn_Random(indic).Tag)) Then
 		        			count_rep = count_rep + 1
 		        		End If
 		        		
-		        		If (count_rep <> 0) Then
+		        		If (count_rep > 0) Then
 		        			result(ind-1) = vbtn_Random(indic).Text
 		        		End If
 	    			Next
 	    			count_rep = 0
-	    				
+	    			
+	    			'ESCOGE OPERADOR
 	    			For indic=0 To 2
 		    			If (operador_resultado = Val(vbtn_Operador(indic).Tag)) Then
 		    				count_rep = count_rep + 1
 		    			End If
 		    			
-		    			If (count_rep <> 0) Then
+		    			If (count_rep > 0) Then
 		        			result(ind-2) = vbtn_Operador(indic).Text
 		        		End If
 	    			Next
-	    			count_rep = 0				
+	    			count_rep = 0
+	    			
+	    			'REALIZA OPERACION
 	    			resultado_pantalla = resultado_parcial.ResolverOperacion(Val(resultado_pantalla), result(ind-2), Val(result (ind-1)))
-	    			ind = ind + 2
-        		Elseif (ind = 8) 
-        			ind = 1
+	    			
+	    		'REINICIA LA OPERACIÓN SIN RESULTA EN DECIMAL
+        		Elseif (((resultado_pantalla * 100) Mod 100) > 0)
+        			ind = 0
         		End If
         		
-        	End If
+        	End If 
         	resultado.Text = resultado_pantalla
+        	ind = ind + 1
         Loop
         ind=0
         
-        If ((Val(txt_Indice.Text) = Val(resultado.Text)) And (Val(txt_Indice.Text) <>0)) Then
+        If ((Val(txt_Indice.Text) = Val(resultado.Text)) And (Val(txt_Indice.Text) <> 0)) Then
         	ganar.Text = "GANASTE!"
         ElseIf (counter > 5 And ((Val(txt_Indice.Text) <> Val(resultado.Text)) And (Val(txt_Indice.Text) <>0)))
         	ganar.Text = "PERDISTE!"
