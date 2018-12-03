@@ -39,7 +39,7 @@ Partial Class Form1
     	'
     	'btn_Inicio
     	'
-    	Me.btn_Inicio.Font = New System.Drawing.Font("Montserrat", 36!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+    	Me.btn_Inicio.Font = New System.Drawing.Font("Microsoft Sans Serif", 36!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
     	Me.btn_Inicio.Location = New System.Drawing.Point(287, 125)
     	Me.btn_Inicio.Name = "btn_Inicio"
     	Me.btn_Inicio.Size = New System.Drawing.Size(171, 66)
@@ -52,13 +52,13 @@ Partial Class Form1
     	Me.txt_Indice.Location = New System.Drawing.Point(496, 155)
     	Me.txt_Indice.Name = "txt_Indice"
     	Me.txt_Indice.ReadOnly = true
-    	Me.txt_Indice.Size = New System.Drawing.Size(40, 20)
+    	Me.txt_Indice.Size = New System.Drawing.Size(60, 20)
     	Me.txt_Indice.TabIndex = 1
     	Me.txt_Indice.Visible = false
     	'
     	'label4
     	'
-    	Me.label4.Font = New System.Drawing.Font("Montserrat", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+    	Me.label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
     	Me.label4.Location = New System.Drawing.Point(160, 69)
     	Me.label4.Name = "label4"
     	Me.label4.Size = New System.Drawing.Size(396, 23)
@@ -67,7 +67,7 @@ Partial Class Form1
     	'
     	'label3
     	'
-    	Me.label3.Font = New System.Drawing.Font("Montserrat", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+    	Me.label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
     	Me.label3.Location = New System.Drawing.Point(242, 46)
     	Me.label3.Name = "label3"
     	Me.label3.Size = New System.Drawing.Size(237, 23)
@@ -76,7 +76,7 @@ Partial Class Form1
     	'
     	'label2
     	'
-    	Me.label2.Font = New System.Drawing.Font("Montserrat", 8.999999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+    	Me.label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
     	Me.label2.Location = New System.Drawing.Point(218, 31)
     	Me.label2.Name = "label2"
     	Me.label2.Size = New System.Drawing.Size(298, 23)
@@ -85,7 +85,7 @@ Partial Class Form1
     	'
     	'label1
     	'
-    	Me.label1.Font = New System.Drawing.Font("Montserrat", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+    	Me.label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
     	Me.label1.Location = New System.Drawing.Point(172, 13)
     	Me.label1.Name = "label1"
     	Me.label1.Size = New System.Drawing.Size(383, 23)
@@ -94,16 +94,16 @@ Partial Class Form1
     	'
     	'resultado
     	'
-    	Me.resultado.Font = New System.Drawing.Font("Montserrat", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+    	Me.resultado.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
     	Me.resultado.Location = New System.Drawing.Point(496, 123)
     	Me.resultado.Name = "resultado"
-    	Me.resultado.Size = New System.Drawing.Size(40, 29)
+    	Me.resultado.Size = New System.Drawing.Size(60, 29)
     	Me.resultado.TabIndex = 13
     	Me.resultado.Visible = false
     	'
     	'signo_igual
     	'
-    	Me.signo_igual.Font = New System.Drawing.Font("Montserrat", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+    	Me.signo_igual.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
     	Me.signo_igual.Location = New System.Drawing.Point(470, 123)
     	Me.signo_igual.Name = "signo_igual"
     	Me.signo_igual.Size = New System.Drawing.Size(24, 23)
@@ -113,7 +113,7 @@ Partial Class Form1
     	'
     	'btn_borrar
     	'
-    	Me.btn_borrar.Font = New System.Drawing.Font("Montserrat", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+    	Me.btn_borrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
     	Me.btn_borrar.Location = New System.Drawing.Point(577, 200)
     	Me.btn_borrar.Name = "btn_borrar"
     	Me.btn_borrar.Size = New System.Drawing.Size(80, 23)
@@ -149,7 +149,7 @@ Partial Class Form1
     	'
     	'btn_siguiente
     	'
-    	Me.btn_siguiente.Font = New System.Drawing.Font("Montserrat", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+    	Me.btn_siguiente.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
     	Me.btn_siguiente.Location = New System.Drawing.Point(496, 260)
     	Me.btn_siguiente.Name = "btn_siguiente"
     	Me.btn_siguiente.Size = New System.Drawing.Size(161, 36)
@@ -160,7 +160,7 @@ Partial Class Form1
     	'
     	'ganar
     	'
-    	Me.ganar.Font = New System.Drawing.Font("Montserrat", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+    	Me.ganar.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
     	Me.ganar.Location = New System.Drawing.Point(558, 123)
     	Me.ganar.Name = "ganar"
     	Me.ganar.Size = New System.Drawing.Size(141, 46)
