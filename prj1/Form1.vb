@@ -124,14 +124,10 @@
 					count_rep = count_rep + 1
 				End If
 				
-				If ((indict = 4) And (count_rep > 0)) Then
+				If (count_rep > 0) Then
 					numero_resultado = num_ram.Next(0, 4)
-					indict = 1
-					count_rep = 0
-				Else
-					indict = indict + 1
 				End If
-				
+				indict = indict + 1
 	    	Loop
 	    	
 	    	indict = 1
@@ -159,13 +155,11 @@
 					count_rep = count_rep + 1
 				End If
 				
-				If ((indict_op = 4) And (count_rep > 0)) Then
-					operador_resultado = num_ram.Next(0, 4)
-					indict_op = 1
-					count_rep = 0
-				Else 
-					indict_op = indict_op + 1
-				End If    			
+				If (count_rep > 0) Then
+					operador_resultado = op_ram.Next(0, 4)
+				End If  
+				
+				indict_op = indict_op + 1
 				
 	    	Loop
 	    	
@@ -192,7 +186,6 @@
 	    	If (ind = 0) Then
 	    		result(ind) = vbtn_Random(numero_resultado).Text
 	    		resultado_pantalla = result(ind)
-	    		ind = ind + 2
 	    
     		
     		ElseIf (ind = 2 And ((resultado_pantalla * 100) Mod 100) = 0) Then
@@ -206,27 +199,29 @@
 	        	
 	        	'RESUELVE LA PRIMERA OPERACION
 	        	resultado_pantalla = resultado_parcial.ResolverOperacion(Val(result(ind-2)), result(ind-1), Val(result(ind)))
-	        	
-	        	ind = ind + 2	        		
-	        		
+
     			
         	'RESUELVE LAS OPERACIONES SIEMPRE QUE LAS ANTERIORES NO HAYAN RESULTADO EN DECIMAL
     		ElseIf(ind > 2 And (((resultado_pantalla * 100) Mod 100) = 0)) Then
     			
     			If (ind <= 7) Then 
     				'ESCOGE NÚMERO
-    				result(ind-1) = vbtn_Random(numero_resultado).Text
+    				result(ind) = vbtn_Random(numero_resultado).Text
 	    			
 	    			'ESCOGE OPERADOR
-	    			result(ind-2) = vbtn_Operador(operador_resultado).Text
+	    			result(ind-1) = vbtn_Operador(operador_resultado).Text
 	    			
 	    			'REALIZA OPERACION
 	    			resultado_pantalla = resultado_parcial.ResolverOperacion(Val(resultado_pantalla), result(ind-1), Val(result (ind)))
-	    			ind = ind + 2
-        		End If
+
+    			End If
+    			
+    		End If
+    			
+    		ind = ind + 2
         		
         	'REINICIA LA OPERACIÓN SI RESULTA EN DECIMAL
-    		Elseif (((resultado_pantalla * 100) Mod 100) > 0)
+    		If (((resultado_pantalla * 100) Mod 100) > 0) Then
     			ind = 0
     			resultado_pantalla = 0
     		End If
@@ -238,7 +233,7 @@
         
         If ((Val(txt_Indice.Text) = Val(resultado.Text)) And (Val(txt_Indice.Text) > 0)) Then
         	ganar.Text = "GANASTE!"
-        ElseIf (counter > 5 And ((Val(txt_Indice.Text) <> Val(resultado.Text)) And (Val(txt_Indice.Text) >0)))
+        ElseIf (counter > 5 And ((Val(txt_Indice.Text) <> Val(resultado.Text)) And (Val(txt_Indice.Text) >0))) Then
         	ganar.Text = "PERDISTE!"
         End If
         
