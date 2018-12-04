@@ -113,22 +113,24 @@
         
         'SE GENERA LA SOLUCIÓN
         Dim ind = 0
-        Do While (ind < 7)
+        Do While (ind <= 6)
         	numero_resultado = Val(num_ram.Next(0, 4))
         	operador_resultado = Val(op_ram.Next(0, 4))
 	    	
 	    	'GENERA UN RAMDOM PARA ESCOGER UN NÚMERO
-	    	Do While (indict > 0 And indict < 5)
-			
-				If (numero_resultado = random_anterior(indict-1))
-					count_rep = count_rep + 1
-				End If
-				
-				If (count_rep > 0) Then
+	    	For indict=0 To 3			
+	    		Do While (numero_resultado = random_anterior(indict)) 
+	    			numero_resultado = num_ram.Next(0, 4)
+	    			count_rep = count_rep + 1 
+	    		Loop
+	  
+				Do While ((count_rep > 0) And (indict=3))
 					numero_resultado = num_ram.Next(0, 4)
-				End If
-				indict = indict + 1
-	    	Loop
+					indict = 0
+					count_rep = 0
+				Loop
+				
+	    	Next
 	    	
 	    	indict = 1
 	    	count_rep = 0
@@ -157,6 +159,8 @@
 				
 				If (count_rep > 0) Then
 					operador_resultado = op_ram.Next(0, 4)
+					indict_op = indict_op - 1
+					count_rep = count_rep - 1
 				End If  
 				
 				indict_op = indict_op + 1
@@ -188,7 +192,7 @@
 	    		resultado_pantalla = result(ind)
 	    
     		
-    		ElseIf (ind = 2 And ((resultado_pantalla * 100) Mod 100) = 0) Then
+    		ElseIf (ind = 2) Then
 				
 				'ESCOGE EL PRIMER OPERADOR
 				result(ind-1) = vbtn_Operador(operador_resultado).Text
@@ -202,7 +206,7 @@
 
     			
         	'RESUELVE LAS OPERACIONES SIEMPRE QUE LAS ANTERIORES NO HAYAN RESULTADO EN DECIMAL
-    		ElseIf(ind > 2 And (((resultado_pantalla * 100) Mod 100) = 0)) Then
+    		ElseIf(ind > 2) Then
     			
     			If (ind <= 7) Then 
     				'ESCOGE NÚMERO
@@ -221,7 +225,7 @@
     		ind = ind + 2
         		
         	'REINICIA LA OPERACIÓN SI RESULTA EN DECIMAL
-    		If (((resultado_pantalla * 100) Mod 100) > 0) Then
+    		If ((((resultado_pantalla * 100) Mod 100) > 0) Or resultado_pantalla < 0) Then
     			ind = 0
     			resultado_pantalla = 0
     		End If
@@ -231,10 +235,10 @@
         Loop
         ind=1
         
-        If ((Val(txt_Indice.Text) = Val(resultado.Text)) And (Val(txt_Indice.Text) > 0)) Then
+        If ((Val(txt_Indice.Text) = Val(resultado.Text)) And (vtxt_Operacion(6).Text <> "")) Then
         	ganar.Text = "GANASTE!"
-        ElseIf (counter > 5 And ((Val(txt_Indice.Text) <> Val(resultado.Text)) And (Val(txt_Indice.Text) >0))) Then
-        	ganar.Text = "PERDISTE!"
+        Elseif ((Val(txt_Indice.Text) <> Val(resultado.Text)) And (vtxt_Operacion(6).Text <> "")) Then
+         	ganar.Text = "PERDISTE!"
         End If
         
         'DESHABILITA LOS OPERADORES
@@ -350,7 +354,7 @@
     
     Sub Btn_borrarClick(sender As Object, e As EventArgs)
     	
-    	'VOVLER AL ESTADO DESPUÉS DE PRESIONADO UN OPERADOR
+    	'VOLVER AL ESTADO DESPUÉS DE PRESIONADO UN OPERADOR
     	If ((counter Mod 2) = 0) Then
 	    	
     		'DESHABILITA LOS OPERADORES
@@ -363,16 +367,24 @@
 	        	vbtn_Random(ind).Enabled="true"
 	        Next
 	        
-	       'DESHABILITA LOS NUMEROS YA UTILIZADOS
-	    	For ind=0 To 3
-	        	For indic=1 To vbtn_Random.Length
-	        		
-	        		If (vbtn_Random(indic-1).Text = numeros_presionados(ind)) Then
-	        			vbtn_Random(indic-1).Enabled = "false"        			
-	        		End If
-	        		
-	        	Next
-	    	Next
+	        'BORRA ELEMENTO DE LA MEMORIA DE NUMEROS PRESIONADOS     
+	        For ind=0 To 3
+	        	If (numeros_presionados(ind) = vtxt_Operacion(counter).Text) Then
+	        		numeros_presionados(ind) = ""
+	        	End If
+	       	Next
+	        
+	        'DESHABILITA LOS NUMEROS YA UTILIZADOS
+		    For ind=0 To 3
+		       	For indic = 0 To 3
+		    		If (Val(vbtn_Random(ind).Text) = Val(numeros_presionados(indic))) Then
+		    			vbtn_Random(ind).Enabled = "false"
+		    			counter_btn_press = 0
+		    		End If
+		    	Next 
+		    Next
+		  
+	        
 	    	
 	    'VOLVER AL ESTADO DESPUÉS DE PRESIONADO UN NUMERO
     	Else
@@ -385,6 +397,7 @@
 	        For ind=0 To 3
 	        	vbtn_Operador(ind).Enabled="true"
 	        Next
+		    
 	        
     	End If
     	

@@ -31,3 +31,14 @@ C:\Users\jmcdonald\Desktop\prj1\obj\Debug\20180309_2_proy1.vbproj.GenerateResour
 C:\Users\jmcdonald\Desktop\prj1\obj\Debug\20180309_2_proy1.exe
 C:\Users\jmcdonald\Desktop\prj1\obj\Debug\20180309_2_proy1.xml
 C:\Users\jmcdonald\Desktop\prj1\obj\Debug\20180309_2_proy1.pdb
+C:\Users\jmcdonald\Desktop\prj1-master\prj1\bin\Debug\20180309_2_proy1.exe.config
+C:\Users\jmcdonald\Desktop\prj1-master\prj1\bin\Debug\20180309_2_proy1.exe
+C:\Users\jmcdonald\Desktop\prj1-master\prj1\bin\Debug\20180309_2_proy1.pdb
+C:\Users\jmcdonald\Desktop\prj1-master\prj1\bin\Debug\20180309_2_proy1.xml
+C:\Users\jmcdonald\Desktop\prj1-master\prj1\obj\Debug\20180309_2_proy1.vbprojResolveAssemblyReference.cache
+C:\Users\jmcdonald\Desktop\prj1-master\prj1\obj\Debug\_20180309_2_proy1.Form1.resources
+C:\Users\jmcdonald\Desktop\prj1-master\prj1\obj\Debug\_20180309_2_proy1.Resources.resources
+C:\Users\jmcdonald\Desktop\prj1-master\prj1\obj\Debug\20180309_2_proy1.vbproj.GenerateResource.Cache
+C:\Users\jmcdonald\Desktop\prj1-master\prj1\obj\Debug\20180309_2_proy1.exe
+C:\Users\jmcdonald\Desktop\prj1-master\prj1\obj\Debug\20180309_2_proy1.xml
+C:\Users\jmcdonald\Desktop\prj1-master\prj1\obj\Debug\20180309_2_proy1.pdb

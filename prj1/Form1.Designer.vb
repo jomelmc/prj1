@@ -97,7 +97,7 @@ Partial Class Form1
     	Me.resultado.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
     	Me.resultado.Location = New System.Drawing.Point(496, 123)
     	Me.resultado.Name = "resultado"
-    	Me.resultado.Size = New System.Drawing.Size(60, 29)
+    	Me.resultado.Size = New System.Drawing.Size(75, 29)
     	Me.resultado.TabIndex = 13
     	Me.resultado.Visible = false
     	'
@@ -161,7 +161,7 @@ Partial Class Form1
     	'ganar
     	'
     	Me.ganar.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-    	Me.ganar.Location = New System.Drawing.Point(558, 123)
+    	Me.ganar.Location = New System.Drawing.Point(577, 129)
     	Me.ganar.Name = "ganar"
     	Me.ganar.Size = New System.Drawing.Size(141, 46)
     	Me.ganar.TabIndex = 19
