@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="PointReorder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codProducto" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PointReorderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PointReorderResult" type="tns:inventarioProductos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="inventarioProductos">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CodProduct" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CantExistence" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CantReOrden" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SalePrice" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="CantPedir" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CantPedir">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codProducto" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CantPedirResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CantPedirResult" type="tns:inventarioProductos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="PointReorderSoapIn">
+    <wsdl:part name="parameters" element="tns:PointReorder" />
+  </wsdl:message>
+  <wsdl:message name="PointReorderSoapOut">
+    <wsdl:part name="parameters" element="tns:PointReorderResponse" />
+  </wsdl:message>
+  <wsdl:message name="CantPedirSoapIn">
+    <wsdl:part name="parameters" element="tns:CantPedir" />
+  </wsdl:message>
+  <wsdl:message name="CantPedirSoapOut">
+    <wsdl:part name="parameters" element="tns:CantPedirResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebService2Soap">
+    <wsdl:operation name="PointReorder">
+      <wsdl:input message="tns:PointReorderSoapIn" />
+      <wsdl:output message="tns:PointReorderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CantPedir">
+      <wsdl:input message="tns:CantPedirSoapIn" />
+      <wsdl:output message="tns:CantPedirSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebService2Soap" type="tns:WebService2Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="PointReorder">
+      <soap:operation soapAction="http://tempuri.org/PointReorder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CantPedir">
+      <soap:operation soapAction="http://tempuri.org/CantPedir" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService2Soap12" type="tns:WebService2Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="PointReorder">
+      <soap12:operation soapAction="http://tempuri.org/PointReorder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CantPedir">
+      <soap12:operation soapAction="http://tempuri.org/CantPedir" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService2">
+    <wsdl:port name="WebService2Soap" binding="tns:WebService2Soap">
+      <soap:address location="http://localhost:8091/WebService2.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebService2Soap12" binding="tns:WebService2Soap12">
+      <soap12:address location="http://localhost:8091/WebService2.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

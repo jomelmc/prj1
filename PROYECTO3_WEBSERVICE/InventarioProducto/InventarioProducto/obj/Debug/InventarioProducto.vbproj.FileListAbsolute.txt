@@ -1,0 +1,28 @@
+C:\Users\Carolina\Desktop\visual\PROYECTO3_WEBSERVICE\InventarioProducto\InventarioProducto\obj\Debug\InventarioProducto.vbprojAssemblyReference.cache
+C:\Users\Carolina\Desktop\visual\PROYECTO3_WEBSERVICE\InventarioProducto\InventarioProducto\obj\Debug\InventarioProducto.cant_productos.resources
+C:\Users\Carolina\Desktop\visual\PROYECTO3_WEBSERVICE\InventarioProducto\InventarioProducto\obj\Debug\InventarioProducto.ConsultaProducto.resources
+C:\Users\Carolina\Desktop\visual\PROYECTO3_WEBSERVICE\InventarioProducto\InventarioProducto\obj\Debug\InventarioProducto.form1.resources
+C:\Users\Carolina\Desktop\visual\PROYECTO3_WEBSERVICE\InventarioProducto\InventarioProducto\obj\Debug\InventarioProducto.Resources.resources
+C:\Users\Carolina\Desktop\visual\PROYECTO3_WEBSERVICE\InventarioProducto\InventarioProducto\obj\Debug\InventarioProducto.vbproj.GenerateResource.cache
+C:\Users\Carolina\Desktop\visual\PROYECTO3_WEBSERVICE\InventarioProducto\InventarioProducto\obj\Debug\InventarioProducto.vbproj.CoreCompileInputs.cache
+C:\Users\Carolina\Desktop\visual\PROYECTO3_WEBSERVICE\InventarioProducto\InventarioProducto\bin\Debug\InventarioProducto.exe.config
+C:\Users\Carolina\Desktop\visual\PROYECTO3_WEBSERVICE\InventarioProducto\InventarioProducto\bin\Debug\InventarioProducto.exe
+C:\Users\Carolina\Desktop\visual\PROYECTO3_WEBSERVICE\InventarioProducto\InventarioProducto\bin\Debug\InventarioProducto.pdb
+C:\Users\Carolina\Desktop\visual\PROYECTO3_WEBSERVICE\InventarioProducto\InventarioProducto\bin\Debug\InventarioProducto.xml
+C:\Users\Carolina\Desktop\visual\PROYECTO3_WEBSERVICE\InventarioProducto\InventarioProducto\obj\Debug\InventarioProducto.exe
+C:\Users\Carolina\Desktop\visual\PROYECTO3_WEBSERVICE\InventarioProducto\InventarioProducto\obj\Debug\InventarioProducto.xml
+C:\Users\Carolina\Desktop\visual\PROYECTO3_WEBSERVICE\InventarioProducto\InventarioProducto\obj\Debug\InventarioProducto.pdb
+C:\Users\jmcdonald\Documents\SharpDevelop Projects\PROYECTO3_WEBSERVICE\InventarioProducto\InventarioProducto\bin\Debug\InventarioProducto.exe.config
+C:\Users\jmcdonald\Documents\SharpDevelop Projects\PROYECTO3_WEBSERVICE\InventarioProducto\InventarioProducto\bin\Debug\InventarioProducto.exe
+C:\Users\jmcdonald\Documents\SharpDevelop Projects\PROYECTO3_WEBSERVICE\InventarioProducto\InventarioProducto\bin\Debug\InventarioProducto.pdb
+C:\Users\jmcdonald\Documents\SharpDevelop Projects\PROYECTO3_WEBSERVICE\InventarioProducto\InventarioProducto\bin\Debug\InventarioProducto.xml
+C:\Users\jmcdonald\Documents\SharpDevelop Projects\PROYECTO3_WEBSERVICE\InventarioProducto\InventarioProducto\obj\Debug\InventarioProducto.vbprojResolveAssemblyReference.cache
+C:\Users\jmcdonald\Documents\SharpDevelop Projects\PROYECTO3_WEBSERVICE\InventarioProducto\InventarioProducto\obj\Debug\InventarioProducto.Resources.resources
+C:\Users\jmcdonald\Documents\SharpDevelop Projects\PROYECTO3_WEBSERVICE\InventarioProducto\InventarioProducto\obj\Debug\InventarioProducto.vbproj.GenerateResource.Cache
+C:\Users\jmcdonald\Documents\SharpDevelop Projects\PROYECTO3_WEBSERVICE\InventarioProducto\InventarioProducto\obj\Debug\InventarioProducto.exe
+C:\Users\jmcdonald\Documents\SharpDevelop Projects\PROYECTO3_WEBSERVICE\InventarioProducto\InventarioProducto\obj\Debug\InventarioProducto.xml
+C:\Users\jmcdonald\Documents\SharpDevelop Projects\PROYECTO3_WEBSERVICE\InventarioProducto\InventarioProducto\obj\Debug\InventarioProducto.pdb
+C:\Users\jmcdonald\Documents\SharpDevelop Projects\PROYECTO3_WEBSERVICE\InventarioProducto\InventarioProducto\obj\Debug\InventarioProducto.ConsultaInventario.resources
+C:\Users\jmcdonald\Documents\SharpDevelop Projects\PROYECTO3_WEBSERVICE\InventarioProducto\InventarioProducto\obj\Debug\InventarioProducto.ConsultarNuevosPedidos.resources
+C:\Users\jmcdonald\Documents\SharpDevelop Projects\PROYECTO3_WEBSERVICE\InventarioProducto\InventarioProducto\obj\Debug\InventarioProducto.Presentacion.resources
+C:\Users\jmcdonald\Documents\SharpDevelop Projects\PROYECTO3_WEBSERVICE\InventarioProducto\InventarioProducto\obj\Debug\InventarioProducto.FormsCotainer.resources
